@@ -24,6 +24,9 @@ public class MainActivity extends Activity {
         myBtn.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
                 DownTask downTask = new DownTask(myText, myBar);
+                // 启动任务
+                // 100 表示每100ms更新一次下载状态信息
+                // 该参数将传递给doInBackground()方法
                 downTask.execute(100);
             }
         });
