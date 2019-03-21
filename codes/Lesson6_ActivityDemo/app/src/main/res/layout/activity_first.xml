@@ -8,4 +8,16 @@
         android:layout_height="wrap_content"
         android:text="button_1"
         />
+    <Button
+        android:id="@+id/btn2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="go to 2nd activity"
+        />
+    <Button
+        android:id="@+id/btn3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="go to 3rd activity"
+        />
 </LinearLayout>
