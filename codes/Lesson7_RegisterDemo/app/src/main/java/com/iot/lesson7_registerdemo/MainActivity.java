@@ -34,23 +34,31 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String checkResult = checkInfo();
                 if (checkResult != null) {
+                    // 新建对话框创建器
                     AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
                     builder.setTitle("出错提示");
                     builder.setMessage(checkResult);
+                    // 设置点击“确定”的按钮，执行相关事件
                     builder.setPositiveButton("确定", new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
+                            // 清空之前用户输入的非法数据
+                            name.setText("");
                             psd.setText("");
                             psd2.setText("");
                         }
                     });
+                    // 创建对话框，并且显示
                     builder.create().show();
                 } else {
+
                     Intent intent = new Intent(MainActivity.this, ResultActivity.class);
+                    // 将用户填写的数据直接通过PutExtra()放入Intent
                     intent.putExtra("name", name.getText().toString());
                     intent.putExtra("psd", psd.getText().toString());
                     String gender = male.isChecked() ? "男" : "女";
                     intent.putExtra("gender", gender);
                     intent.putExtra("city", city.getText().toString());
+
                     startActivity(intent);
                 }
             }
