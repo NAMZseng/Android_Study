@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Lesson7_DialDemo</string>
+    <string name="msg">请输入号码</string>
+    <string name="btn">拨打此号码</string>
+</resources>

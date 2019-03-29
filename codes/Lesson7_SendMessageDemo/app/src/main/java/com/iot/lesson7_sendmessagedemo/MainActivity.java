@@ -28,33 +28,12 @@ public class MainActivity extends AppCompatActivity {
                 String mobile = num.getText().toString();
                 String content = mess.getText().toString();
                 Intent intent = new Intent();
-                intent.setData(Uri.parse("Send Message to:" + mobile));
-                intent.putExtra("Message", content);
+
+                intent.setData(Uri.parse("smsto:" + mobile));
+                intent.putExtra("sms_body", content);
 
                 startActivity(intent);
             }
         });
     }
 }
-
-/*
- * SmsManager smsManager = SmsManager.getDefault();
- * PendingIntent sentIntent = PendingIntent.getBroadcast( MainActivity.this, 0, new Intent(), 0);
- * List<String> msgs = smsManager.divideMessage(content);
- * for (String msg : msgs) {
- *   smsManager.sendTextMessage(mobile, null, msg, sentIntent,null);
- *  }
- * Toast.makeText(MainActivity.this, "短信发送完成！", Toast.LENGTH_SHORT).show();
- * }
- *
- * Intent intent = new Intent();
- * intent.setAction(Intent.ACTION_SENDTO);
- * intent.setData(Uri.parse("smsto:" + mobile));
- * intent.putExtra("sms_body",content); startActivity(intent);
- *
- * Intent intent=new Intent();
- * intent.setAction("android.intent.action.VIEW");
- * intent.setData(Uri.parse("http://www.baidu.com")); startActivity(intent);
- *
- * 添加权限：<uses-permission android:name="android.permission.INTERNET"/>
- */
