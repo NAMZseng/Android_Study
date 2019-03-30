@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
                 Uri uri = Uri.parse("tel:" + editText.getText().toString());
                 //第一个参数表示操作的动作，系统根据这个会调用拨号功能
                 //第二个参数用于指定操作的数据，即向拨打哪个号码
-                Intent intent = new Intent(Intent.ACTION_CALL, uri);
+                Intent intent = new Intent(Intent.ACTION_DIAL, uri);
 
                 startActivity(intent);
             }
