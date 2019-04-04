@@ -11,23 +11,15 @@ public class MyService extends Service {
     private int count = 0;
     private boolean quit = false;
 
-    private MyBinder myBinder = new MyBinder();
-
     public class MyBinder extends Binder {
         public MyBinder() {
             Log.i(TAG, "MyBinder Constructure invoked!");
         }
-
         public int getCount() {
             return count;
         }
     }
-
-    @Override
-    public IBinder onBind(Intent arg0) {
-        Log.i(TAG, "MyService onBind invoked!");
-        return myBinder;
-    }
+    private MyBinder myBinder = new MyBinder();
 
     @Override
     public void onCreate() {
@@ -37,7 +29,7 @@ public class MyService extends Service {
             public void run() {
                 while (!quit) {
                     try {
-                        Thread.sleep(500);
+                        Thread.sleep(100);
                         count++;
                         System.out.println();
                     } catch (Exception e) {
@@ -46,7 +38,11 @@ public class MyService extends Service {
                 }
             }
         }.start();
-
+    }
+    @Override
+    public int onStartCommand(Intent intent, int flags, int startId) {
+        Log.i(TAG, "MyService onStartCommand invoked!");
+        return super.onStartCommand(intent, flags, startId);
     }
     @Override
     public void onDestroy() {
@@ -55,9 +51,9 @@ public class MyService extends Service {
         quit = true;
     }
     @Override
-    public int onStartCommand(Intent intent, int flags, int startId) {
-        Log.i(TAG, "MyService onStartCommand invoked!");
-        return super.onStartCommand(intent, flags, startId);
+    public IBinder onBind(Intent arg0) {
+        Log.i(TAG, "MyService onBind invoked!");
+        return myBinder;
     }
     @Override
     public boolean onUnbind(Intent intent) {
