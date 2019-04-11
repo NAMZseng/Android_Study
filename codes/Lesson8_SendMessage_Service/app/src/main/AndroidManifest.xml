@@ -17,5 +17,7 @@
             </intent-filter>
         </activity>
     </application>
+    <!-- 申请发送短信的系统服务-->
+    <uses-permission android:name="android.permission.SEND_SMS" />
 
 </manifest>
