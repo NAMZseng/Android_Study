@@ -16,7 +16,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
     private Button start, stop, bind, unbind, getData;
     private final static String TAG = "MyService";
-    private MyService.MyBinder myBinder;
+    private MyService.MyBinder myBinder = null;
 
     // 创建服务连接监听类，用于绑定服务时使用
     private ServiceConnection conn = new ServiceConnection() {
