@@ -11,10 +11,10 @@ public class ResultActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
 
-        TextView resultName = (TextView) findViewById(R.id.resultName);
-        TextView resultPsd = (TextView) findViewById(R.id.resultPsd);
-        TextView resultGender = (TextView) findViewById(R.id.resultGender);
-        TextView resultCity = (TextView) findViewById(R.id.resultCity);
+        TextView resultName = findViewById(R.id.resultName);
+        TextView resultPsd = findViewById(R.id.resultPsd);
+        TextView resultGender = findViewById(R.id.resultGender);
+        TextView resultCity = findViewById(R.id.resultCity);
 
         // 获取MainActivity发送过来的Intent
         Intent intent = getIntent();

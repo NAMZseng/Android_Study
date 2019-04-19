@@ -31,18 +31,16 @@
 
             <EditText
                 android:id="@+id/passwordEt"
-                android:inputType="textPassword"
                 android:layout_weight="1"
-                android:hint="请输入您的密码：" />
+                android:hint="请输入您的密码："
+                android:inputType="textPassword" />
         </TableRow>
 
         <TableRow>
 
             <CheckBox
                 android:id="@+id/rememberPass"
-                android:layout_gravity="center"
-
-                />
+                android:layout_gravity="center" />
 
             <TextView
                 android:text="记住密码"

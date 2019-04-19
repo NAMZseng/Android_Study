@@ -11,7 +11,7 @@ import android.os.Bundle;
 
 public class BaseActivity extends AppCompatActivity {
 
-    private ForceOffLineReceiver receiver=null;
+    private ForceOffLineReceiver receiver = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,19 +22,18 @@ public class BaseActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        IntentFilter intentFilter =new IntentFilter(MainActivity.FORCE_OOFLINE);
-        receiver=new ForceOffLineReceiver();
-        registerReceiver(receiver,intentFilter);
+        IntentFilter intentFilter = new IntentFilter(MainActivity.FORCE_OFFLINE);
+        receiver = new ForceOffLineReceiver();
+        registerReceiver(receiver, intentFilter);
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        if(receiver!=null)
-        {
+        if (receiver != null) {
             unregisterReceiver(receiver);
         }
-        receiver =null;
+        receiver = null;
     }
 
     @Override
@@ -43,27 +42,24 @@ public class BaseActivity extends AppCompatActivity {
         ActivityCollector.removeActivity(this);
     }
 
-    class ForceOffLineReceiver extends BroadcastReceiver{
+    private class ForceOffLineReceiver extends BroadcastReceiver {
 
         @Override
         public void onReceive(Context context, Intent intent) {
 
-            AlertDialog.Builder builder=new AlertDialog.Builder(context);
+            AlertDialog.Builder builder = new AlertDialog.Builder(context);
             builder.setTitle("警告对话框");
-            builder.setMessage("你被强制下线了!!!请重新登录🙂");
+            builder.setMessage("你被强制下线了!请重新登录🙂");
             builder.setCancelable(false);
             builder.setPositiveButton("确认", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
                     ActivityCollector.finishAll();
-                    Intent intent1=new Intent(BaseActivity.this,LoginActivity.class);
+                    Intent intent1 = new Intent(BaseActivity.this, LoginActivity.class);
                     startActivity(intent1);
-
                 }
             });
-
             builder.show();
-
         }
     }
 }

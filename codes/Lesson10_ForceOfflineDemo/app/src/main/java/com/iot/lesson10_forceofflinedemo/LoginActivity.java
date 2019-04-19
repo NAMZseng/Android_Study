@@ -53,7 +53,6 @@ public class LoginActivity extends BaseActivity {
 
                 if (nsernameStr.equals("admin") && passwordStr.equals("123456")) {
                     if (rememberPass.isChecked()) {
-
                         editor.putString("useName", nsernameStr);
                         editor.putString("password", passwordStr);
                         editor.putBoolean("rememberPass", rememberPass.isChecked());

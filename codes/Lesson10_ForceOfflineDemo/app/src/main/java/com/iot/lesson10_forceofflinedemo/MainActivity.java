@@ -8,19 +8,19 @@ import android.widget.Button;
 
 public class MainActivity extends BaseActivity {
 
-    public static final String FORCE_OOFLINE = "com.iot.lesson10_forceofflinedemo.MainActivity.firstblind";
-    private Button sendBtn=null;
+    public static final String FORCE_OFFLINE = "com.iot.lesson10_forceofflinedemo.forceOffline";
+    private Button sendBtn = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        sendBtn=findViewById(R.id.sendBtn);
+        sendBtn = findViewById(R.id.sendBtn);
         sendBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent =new Intent(FORCE_OOFLINE);
+                Intent intent = new Intent(FORCE_OFFLINE);
                 sendBroadcast(intent);
             }
         });
