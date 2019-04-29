@@ -10,6 +10,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".SearchBookActivity"></activity>
+        <activity android:name=".UpdateBookActivity" />
+        <activity android:name=".DelBookActivity" />
+        <activity android:name=".AddBookActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

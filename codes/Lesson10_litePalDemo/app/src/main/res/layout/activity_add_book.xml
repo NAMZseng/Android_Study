@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".AddBookActivity">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableRow>
+
+            <TextView
+                android:text="书名"
+                android:textSize="24sp" />
+
+            <EditText
+                android:id="@+id/nameAddEt"
+                android:layout_weight="1" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:text="作者"
+                android:textSize="24sp" />
+
+            <EditText
+                android:id="@+id/authorAddEt"
+                android:layout_weight="1" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:text="出版社"
+                android:textSize="24sp" />
+
+            <EditText
+                android:id="@+id/pressAddEt"
+                android:layout_weight="1" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:text="价格"
+                android:textSize="24sp" />
+
+            <EditText
+                android:id="@+id/priceAddEt"
+                android:layout_weight="1" />
+        </TableRow>
+
+    </TableLayout>
+
+    <Button
+        android:id="@+id/confirmAddBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="确认添加"
+        android:textSize="24sp" />
+
+</LinearLayout>
