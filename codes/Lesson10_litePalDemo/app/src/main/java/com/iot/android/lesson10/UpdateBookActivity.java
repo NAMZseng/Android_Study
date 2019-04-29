@@ -12,8 +12,7 @@ import org.litepal.LitePal;
 import java.util.List;
 
 /**
- * 更新图书信息
- *
+ * 更新图书信息界面
  * @author Nanrong Zeng
  * @version 1.0
  */

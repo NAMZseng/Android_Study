@@ -11,7 +11,6 @@ import org.litepal.LitePal;
 
 /**
  * 主界面程序, 设有增删查改的跳转按钮
- *
  * @author Nanrong Zeng
  * @version 1.0
  */

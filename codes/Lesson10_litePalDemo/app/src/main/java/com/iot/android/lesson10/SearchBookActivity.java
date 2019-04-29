@@ -18,8 +18,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 查询图书
- *
+ * 查询图书界面
  * @author Nanrong Zeng
  * @version 1.0
  */

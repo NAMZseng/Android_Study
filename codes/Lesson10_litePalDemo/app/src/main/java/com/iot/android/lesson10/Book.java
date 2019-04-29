@@ -5,7 +5,6 @@ import org.litepal.crud.LitePalSupport;
 
 /**
  * 图书信息DAO类,继承LitePalSupport类，完成CRUD操作
- *
  * @author Nanrong Zeng
  * @version 1.0
  */
