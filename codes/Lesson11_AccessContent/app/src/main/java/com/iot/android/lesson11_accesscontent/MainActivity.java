@@ -149,6 +149,5 @@ public class MainActivity extends AppCompatActivity {
         titleLL = findViewById(R.id.titleLL);
         resultLv = findViewById(R.id.resultLv);
         resolver = getContentResolver();
-
     }
 }
