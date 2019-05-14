@@ -65,10 +65,9 @@ public class MainActivity extends AppCompatActivity {
 
                     // 字节流
                     InputStream inputStream = connection.getInputStream();
-                    // TODO 字节流 字符流？
                     // 字节流转换成字符流
                     bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
-                    // TODO builder buffer ?
+                    //  builder单线程; buffer多线程
                     StringBuilder responseStr = new StringBuilder();
                     String lineStr = null;
 
