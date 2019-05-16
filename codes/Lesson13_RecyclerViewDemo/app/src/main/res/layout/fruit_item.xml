@@ -2,8 +2,10 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="100dp"
     android:layout_height="wrap_content"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:layout_margin="5dp">
 
+    <!--layout_margin="5dp" 表示每个图像四周都与其他元素有5dp的间隔-->
     <ImageView
         android:id="@+id/fruit_Image"
         android:layout_width="wrap_content"
@@ -15,7 +17,7 @@
         android:id="@+id/fruit_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
+        android:layout_gravity="left"
         android:layout_marginTop="10dp"
         />
 </LinearLayout>
