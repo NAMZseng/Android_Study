@@ -6,6 +6,8 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.Menu;
+import android.view.MenuItem;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -93,6 +95,21 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.exit:
+                Toast.makeText(this, "已点击退出菜单项", Toast.LENGTH_LONG).show();
+                break;
+            case R.id.logout:
+                Toast.makeText(this, "已点击注销菜单项", Toast.LENGTH_LONG).show();
+                break;
+            default:
+                break;
+        }
         return true;
     }
 }
